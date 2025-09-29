@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Pato" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ojo Dulce Pastelería — Rossana Cuadrado Villa</title>
+
+  <!-- Fuente (coincide con el style.css que usamos) -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tu CSS (ya lo tienes con paleta amarilla pastel) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Skip link para accesibilidad -->
+  <style>
+    /* pequeño estilo inline sólo para el skip-link (no rompe tu CSS) */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- HEADER (coincide con style.css que usa header selector) -->
+  <header>
+    <div class="brand" aria-label="Marca Ojo Dulce">
+      <img src="ojo dulce logo.webp" alt="Logo - Ojo Dulce" class="logo" width="60" height="60">
+      <div class="brand-text">
+        <h1>Ojo Dulce</h1>
+        <div class="slogan" aria-hidden="true">Endulzamos tus momentos ✨</div>
+      </div>
+    </div>
+
+    <!-- Navegación (enlaces coinciden con anclas en la página) -->
+    <nav aria-label="Menú principal">
+      <button id="menuToggle" aria-expanded="false" aria-controls="mainNav" style="display:none">Menú</button>
+      <ul id="mainNav" class="nav-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#encargada">Encargada</a></li>
+        <li><a href="#testimonios">Opiniones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / BANNER -->
+  <section id="inicio" class="hero" aria-labelledby="hero-title" style="padding:28px 16px; text-align:center;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <h2 id="hero-title" style="font-size:28px; margin-bottom:6px; color:var(--amarillo-intenso);">Bienvenido a Ojo Dulce</h2>
+      <p style="margin-bottom:12px; color:var(--texto-suave);">Postres artesanales hechos con cariño por <strong>Rossana Cuadrado Villa</strong>. ¡Haz de cada momento algo dulce!</p>
+      <a href="#productos" class="btn" style="display:inline-block;">Ver productos</a>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- ENCARGADA (usa .encargada para coincidir con CSS) -->
+    <section id="encargada" class="encargada" aria-labelledby="encargada-title" style="max-width:1100px;">
+      <img src="pato.jpg" alt="Rossana Cuadrado Villa - encargada de Ojo Dulce" class="profile-photo">
+      <div class="info">
+        <h2 id="encargada-title">Rossana Cuadrado Villa</h2>
+        <p>Fundadora y repostera principal en <strong>Ojo Dulce Pastelería</strong>. Especialista en tartas personalizadas y postres clásicos con un toque moderno. Su objetivo: transformar ingredientes simples en recuerdos inolvidables. 💛</p>
+        <p><strong>Local:</strong> Centro Comercial San Silvestre, segundo piso.</p>
+        <p><strong>Atención y pedidos:</strong> WhatsApp: <a href="tel:+573227704203">+57 322 7704203</a></p>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS (usa #productos, .grid, .card, .price, .btn tal como el CSS) -->
+    <section id="productos" class="productos" aria-labelledby="productos-title">
+      <div style="max-width:1150px;margin:0 auto;padding:0 16px;">
+        <h2 id="productos-title">Nuestros postres más populares</h2>
+        <p class="section-desc">Elaborados con ingredientes frescos y mucho cariño. Pide el tuyo para hoy o encarga tu celebración.</p>
+
+        <div class="grid" role="list">
+          <!-- flan -->
+          <article class="card" role="listitem">
+            <figure>
+              <img src="flan.jpg" alt="Flan de caramelo" width="600" height="400">
+              <figcaption style="display:none">Flan de caramelo</figcaption>
+            </figure>
+            <h3>Flan de caramelo</h3>
+            <p>Textura cremosa y caramelo dorado que se deshace en la boca. Un clásico que encanta a todos.</p>
+            <div class="price">$12.000 COP</div>
+            <button class="btn" type="button" data-product="Flan de caramelo">Pedir ahora</button>
+          </article>
+
+          <!-- galletas -->
+          <article class="card" role="listitem">
+            <figure>
+              <img src="galletas.jpg" alt="Galletas con chispas de chocolate" width="600" height="400">
+            </figure>
+            <h3>Galletas con chocolate</h3>
+            <p>Crocantes por fuera y suaves por dentro, con chispas de chocolate generosas.</p>
+            <div class="price">$8.000 COP (6 uds)</div>
+            <button class="btn" type="button" data-product="Galletas con chocolate">Pedir ahora</button>
+          </article>
+
+          <!-- macarron -->
+          <article class="card" role="listitem">
+            <figure>
+              <img src="macarron.jpg" alt="Macarrón rosado relleno" width="600" height="400">
+            </figure>
+            <h3>Macarrón rosado</h3>
+            <p>Exquisitos y delicados, con relleno cremoso — perfectos para detalles y regalos.</p>
+            <div class="price">$5.000 COP (unidad)</div>
+            <button class="btn" type="button" data-product="Macarrón rosado">Pedir ahora</button>
+          </article>
+
+          <!-- pastel de fresa -->
+          <article class="card" role="listitem">
+            <figure>
+              <img src="pastel de fresa.jpg" alt="Pastel de fresa decorado con crema y fresas" width="600" height="400">
+            </figure>
+            <h3>Pastel de fresa</h3>
+            <p>Tierno, esponjoso y decorado con fresas frescas. Ideal para cumpleaños y celebraciones.</p>
+            <div class="price">$65.000 COP</div>
+            <button class="btn" type="button" data-product="Pastel de fresa">Pedir ahora</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section id="testimonios" class="testimonios" aria-labelledby="opiniones-title" style="max-width:1100px;margin:40px auto;padding:0 16px;">
+      <h2 id="opiniones-title">Opiniones de clientes</h2>
+      <div class="opiniones" style="display:grid; gap:14px; margin-top:12px;">
+        <blockquote>
+          <p>“El pastel de fresa fue la estrella de la fiesta. Sabor increíble y presentación hermosa.”</p>
+          <cite>— Ana R.</cite>
+        </blockquote>
+        <blockquote>
+          <p>“Pedí galletas para una reunión y volaron. Reposterí­a artesanal de primera.”</p>
+          <cite>— Felipe M.</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CONTACTO (usa #contacto tal como en el CSS) -->
+    <section id="contacto" class="contacto" aria-labelledby="contacto-title">
+      <div style="max-width:950px;margin:0 auto;padding:0 16px;">
+        <h2 id="contacto-title">Contacto y pedidos</h2>
+        <p>¿Tienes un encargo especial? Cuéntanos lo que necesitas y te responderemos rápido.</p>
+
+        <!-- Formulario simple -->
+        <form id="contactForm" novalidate style="display:grid; gap:10px; margin-top:12px;">
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            <input name="name" type="text" placeholder="Tu nombre" required style="flex:1; padding:10px; border-radius:8px; border:1px solid #eee;">
+            <input name="phone" type="tel" placeholder="Teléfono o WhatsApp" required style="flex:1; padding:10px; border-radius:8px; border:1px solid #eee;">
+          </div>
+          <input name="email" type="email" placeholder="Email (opcional)" style="padding:10px; border-radius:8px; border:1px solid #eee;">
+          <textarea name="message" rows="4" placeholder="¿Qué quieres encargar?" required style="padding:10px; border-radius:8px; border:1px solid #eee;"></textarea>
+          <div style="display:flex; gap:12px; align-items:center;">
+            <button class="btn" type="submit">Enviar mensaje</button>
+            <small style="color:var(--texto-suave);">También puedes escribir por WhatsApp: <a href="tel:+573227704203">+57 322 7704203</a></small>
+          </div>
+        </form>
+
+        <!-- Newsletter -->
+        <div style="margin-top:18px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          <label for="newsletter" style="font-weight:600;color:var(--texto-suave);">Suscríbete a nuestro newsletter</label>
+          <input id="newsletter" type="email" placeholder="Tu correo" style="padding:8px 10px; border-radius:8px; border:1px solid #eee;">
+          <button class="btn" type="button" id="btnSubscribe">Suscribir</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (coincide con selector footer en CSS) -->
+  <footer>
+    <div style="max-width:1100px;margin:0 auto; display:flex; flex-wrap:wrap; gap:18px; justify-content:space-between; align-items:center; padding:12px 16px;">
+      <div class="horarios">
+        <strong>Horarios</strong>
+        <div style="color:var(--texto-suave);">Lun–Sáb: 9:00–20:00 · Dom: 10:00–18:00</div>
+      </div>
+
+      <div class="redes">
+        <strong>Síguenos</strong>
+        <div style="display:flex; gap:8px; align-items:center; color:var(--texto-suave); margin-top:6px;">
+          <!-- iconos SVG simples -->
+          <a href="#" aria-label="Instagram" title="Instagram" style="display:inline-block;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" title="Facebook" style="display:inline-block;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5c0-2.4 1.4-3.7 3.5-3.7 1 0 2 .1 2 .1v2.3H15c-1.2 0-1.5.7-1.5 1.4V12H17l-.5 3h-2v7A10 10 0 0022 12z" stroke="currentColor" stroke-width="0.7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:8px;">© <span id="year"></span> Ojo Dulce Pastelería — Diseñado con cariño por <strong>Pato</strong></p>
+  </footer>
+
+  <!-- Scripts: año, formulario simple y menú móvil (no hace peticiones) -->
+  <script>
+    // Año en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Formulario: evitar envío real y mostrar confirmación sencilla
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Validación mínima
+      var name = this.name.value.trim();
+      var phone = this.phone.value.trim();
+      var message = this.message.value.trim();
+      if (!name || !phone || !message) {
+        alert('Por favor completa los campos requeridos: nombre, teléfono y mensaje.');
+        return;
+      }
+      // Simular envío
+      alert('Gracias ' + name + '! Tu mensaje ha sido recibido. Nos contactamos al ' + phone + ' pronto.');
+      this.reset();
+    });
+
+    // Newsletter (simulación)
+    document.getElementById('btnSubscribe').addEventListener('click', function () {
+      var mail = document.getElementById('newsletter').value.trim();
+      if (!mail) {
+        alert('Ingresa tu correo para suscribirte.');
+        return;
+      }
+      alert('¡Gracias! ' + mail + ' ha sido suscrito a nuestras ofertas.');
+      document.getElementById('newsletter').value = '';
+    });
+
+    // Menú móvil (si necesitas mostrar botón, remueve el style display:none del botón en header o en CSS)
+    var menuToggle = document.getElementById('menuToggle');
+    var mainNav = document.getElementById('mainNav');
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', function () {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        mainNav.classList.toggle('open');
+      });
+    }
+
+    // Botones "Pedir ahora": ejemplo de captura de producto
+    document.querySelectorAll('.card .btn[data-product]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var p = this.getAttribute('data-product');
+        alert('Has elegido: ' + p + '. Para ordenar, contáctanos por WhatsApp o completa el formulario de contacto.');
+      });
+    });
+  </script>
+</body>
+</html>

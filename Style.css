@@ -1,0 +1,216 @@
+/* 🌼 Variables de color principales */
+:root {
+  --amarillo-pastel: #fff9db;
+  --amarillo-intenso: #ffe066;
+  --amarillo-borde: #ffd43b;
+  --blanco: #ffffff;
+  --gris-claro: #f9f9f9;
+  --texto: #333;
+  --texto-suave: #555;
+}
+
+/* 🌼 Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", Arial, sans-serif;
+  background: var(--gris-claro);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+/* 🌼 Encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--blanco);
+  padding: 18px 35px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+header .brand img {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 3px solid var(--amarillo-borde);
+}
+
+header h1 {
+  font-size: 22px;
+  color: var(--amarillo-borde);
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--texto);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--amarillo-borde);
+}
+
+/* 🌼 Sección encargada */
+.encargada {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background: var(--blanco);
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 18px;
+  max-width: 1100px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+}
+
+.encargada img {
+  width: 130px;
+  height: 130px;
+  border-radius: 18px;
+  object-fit: cover;
+  border: 3px solid var(--amarillo-borde);
+}
+
+.encargada .info h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+  color: var(--amarillo-intenso);
+}
+
+.encargada .info p {
+  color: var(--texto-suave);
+  font-size: 15px;
+}
+
+/* 🌼 Productos */
+#productos {
+  max-width: 1150px;
+  margin: auto;
+  padding: 25px;
+  text-align: center;
+}
+
+#productos h2 {
+  font-size: 24px;
+  color: var(--amarillo-intenso);
+  margin-bottom: 12px;
+}
+
+#productos p {
+  font-size: 15px;
+  color: var(--texto-suave);
+  margin-bottom: 22px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--blanco);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 190px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  color: var(--amarillo-intenso);
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.price {
+  margin-top: 12px;
+  font-weight: 700;
+  color: var(--amarillo-borde);
+}
+
+.btn {
+  margin-top: 14px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--amarillo-intenso);
+  color: var(--texto);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--amarillo-borde);
+}
+
+/* 🌼 Contacto */
+#contacto {
+  max-width: 950px;
+  margin: 45px auto;
+  padding: 24px;
+  background: var(--blanco);
+  border-radius: 14px;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 22px;
+  color: var(--amarillo-intenso);
+  margin-bottom: 12px;
+}
+
+#contacto p {
+  color: var(--texto-suave);
+  font-size: 15px;
+}
+
+/* 🌼 Footer */
+footer {
+  background: var(--amarillo-pastel);
+  color: var(--texto);
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 35px;
+}
